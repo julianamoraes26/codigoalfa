@@ -1,0 +1,1381 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Diagnóstico Alfa Gratuito | Juliana Moraes | Posicionamento Digital para Mulheres 40+</title>
+  <meta name="description" content="Agende uma sessão de diagnóstico gratuita de 30 minutos com Juliana Moraes e descubra o que está impedindo sua presença digital de gerar clientes.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      /* Terracota e Vinho - Light Mode Elegante */
+      --bg-primary: #fdfbf7;
+      --bg-secondary: #f6f3eb;
+      --bg-card: #ffffff;
+      --bg-card-hover: #faf8f2;
+      --gold: #a34321; /* Terracota */
+      --gold-light: #bd4f2c; /* Terracota mais claro */
+      --gold-dark: #8b1c1c; /* Vinho Escuro */
+      --cream: #2c2a29; /* Heading text */
+      --cream-soft: #4a4642;
+      --text-primary: #2c2a29;
+      --text-secondary: #4a4642;
+      --text-muted: #75706a;
+      --border: rgba(139, 28, 28, 0.12); /* Vinho transparent */
+      --border-hover: rgba(139, 28, 28, 0.25);
+      --gradient-gold: linear-gradient(135deg, #8b1c1c, #a34321, #bd4f2c); /* Vinho to Terracota */
+      --gradient-dark: linear-gradient(180deg, #fdfbf7 0%, #f6f3eb 100%);
+      --shadow-gold: 0 8px 30px rgba(139, 28, 28, 0.15);
+      --shadow-card: 0 4px 30px rgba(0, 0, 0, 0.04);
+      --radius: 12px;
+      --radius-lg: 20px;
+      --max-width: 900px;
+      --section-padding: 120px 24px;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      overflow-x: hidden;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, sans-serif;
+      background: var(--bg-primary);
+      color: var(--text-primary);
+      line-height: 1.7;
+      font-weight: 300;
+      overflow-x: hidden;
+    }
+
+    /* ——— TYPOGRAPHY ——— */
+    h1, h2, h3 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-weight: 500;
+      line-height: 1.25;
+      letter-spacing: -0.01em;
+    }
+
+    h1 {
+      font-size: clamp(2.2rem, 5vw, 3.4rem);
+      color: var(--cream);
+    }
+
+    h2 {
+      font-size: clamp(1.7rem, 5vw, 2.8rem);
+      color: var(--gold-dark);
+      margin-bottom: 40px;
+      letter-spacing: -0.02em;
+      line-height: 1.25;
+    }
+
+    p {
+      font-size: 1.05rem;
+      color: var(--text-secondary);
+      margin-bottom: 20px;
+    }
+
+    strong {
+      color: var(--cream);
+      font-weight: 600;
+    }
+
+    /* ——— LAYOUT ——— */
+    .container {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    section {
+      padding: var(--section-padding);
+      position: relative;
+    }
+
+    .section-divider {
+      width: 60px;
+      height: 1px;
+      background: var(--gradient-gold);
+      margin: 0 auto 40px;
+      opacity: 0.8;
+    }
+
+    /* ——— ANIMATIONS ——— */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .fade-in-delay-1 { transition-delay: 0.1s; }
+    .fade-in-delay-2 { transition-delay: 0.2s; }
+    .fade-in-delay-3 { transition-delay: 0.3s; }
+    .fade-in-delay-4 { transition-delay: 0.4s; }
+
+    /* ——— CTA BUTTON ——— */
+    .cta-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 18px 40px;
+      background: var(--gradient-gold);
+      color: #ffffff;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      text-decoration: none;
+      border-radius: 60px;
+      border: none;
+      cursor: pointer;
+      transition: all 0.4s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cta-btn::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+      transition: left 0.6s ease;
+    }
+
+    .cta-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-gold);
+    }
+
+    .cta-btn:hover::before {
+      left: 100%;
+    }
+
+    .cta-btn .arrow {
+      transition: transform 0.3s ease;
+    }
+
+    .cta-btn:hover .arrow {
+      transform: translateX(4px);
+    }
+
+    .cta-support {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      margin-top: 16px;
+      line-height: 1.6;
+    }
+
+    /* ——— HERO ——— */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 80px 24px;
+      position: relative;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -200px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(139, 28, 28, 0.04) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .hero-content {
+      max-width: 720px;
+    }
+
+    .hero-pre {
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--gold-dark);
+      margin-bottom: 32px;
+      display: inline-block;
+      padding: 8px 20px;
+      border: 1px solid var(--border);
+      border-radius: 40px;
+      background: rgba(139, 28, 28, 0.03);
+    }
+
+    .hero h1 {
+      margin-bottom: 28px;
+    }
+
+    .hero h1 em {
+      font-style: italic;
+      color: var(--gold);
+    }
+
+    .hero-sub {
+      font-size: 1.12rem;
+      color: var(--text-secondary);
+      max-width: 580px;
+      margin: 0 auto 44px;
+      line-height: 1.8;
+    }
+
+    /* ——— PAIN SECTION ——— */
+    .pain {
+      background: var(--bg-secondary);
+    }
+
+    .pain-wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+    }
+
+    .pain-image-col {
+      width: 100%;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-card);
+      aspect-ratio: 4/5;
+    }
+
+    .pain-image-col img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    @media (min-width: 768px) {
+      .pain-wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        gap: 60px;
+      }
+      .pain-image-col {
+        aspect-ratio: 3/4;
+      }
+    }
+
+    .pain-text p {
+      font-size: 1.1rem;
+      line-height: 1.85;
+      margin-bottom: 24px;
+    }
+
+    .pain-text p.highlight {
+      color: var(--gold-dark);
+      font-weight: 600;
+      font-size: 1.2rem;
+      font-family: 'Playfair Display', serif;
+      margin-top: 36px;
+    }
+
+    /* ——— WHAT IS ——— */
+    .what-is .intro-text {
+      font-size: 1.08rem;
+      margin-bottom: 48px;
+      color: var(--text-secondary);
+    }
+
+    .benefits-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      margin-bottom: 48px;
+    }
+
+    .benefits-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      padding: 20px 24px;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      transition: all 0.3s ease;
+      font-size: 1rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+      box-shadow: var(--shadow-card);
+    }
+
+    .benefits-list li:hover {
+      border-color: var(--border-hover);
+      background: var(--bg-card-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+    }
+
+    .benefits-list li .icon {
+      flex-shrink: 0;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--gold);
+      margin-top: 10px;
+    }
+
+    .session-meta {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+      padding: 32px 0 0 0;
+      border-top: 1px solid var(--border);
+    }
+
+    .meta-item {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding: 20px;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-card);
+      transition: all 0.3s ease;
+    }
+
+    .meta-item:hover {
+      transform: translateY(-2px);
+      border-color: var(--border-hover);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+    }
+
+    .meta-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: rgba(163, 67, 33, 0.06);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--gold);
+      flex-shrink: 0;
+    }
+
+    .meta-icon svg {
+      width: 24px;
+      height: 24px;
+      stroke: currentColor;
+      stroke-width: 1.5;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      fill: none;
+    }
+
+    .meta-text {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .meta-text strong {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-muted);
+      margin-bottom: 4px;
+      font-weight: 600;
+    }
+
+    .meta-text span {
+      font-size: 1.05rem;
+      font-weight: 500;
+      color: var(--cream);
+    }
+
+    /* ——— STEPS ——— */
+    .steps {
+      background: var(--bg-secondary);
+    }
+
+    .steps-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 24px;
+    }
+
+    .step-card {
+      padding: 32px;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      position: relative;
+      transition: all 0.3s ease;
+      box-shadow: var(--shadow-card);
+    }
+
+    .step-card:hover {
+      border-color: var(--border-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+    }
+
+    .step-card h3 {
+      font-size: 1.15rem;
+      color: var(--cream);
+      margin-bottom: 12px;
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+    }
+
+    .step-card p {
+      font-size: 0.95rem;
+      color: var(--text-secondary);
+      margin-bottom: 0;
+      max-width: 90%;
+    }
+
+    /* ——— FOR WHO ——— */
+    .for-who .list-block {
+      margin-bottom: 56px;
+    }
+
+    .for-who .list-block:last-child {
+      margin-bottom: 0;
+    }
+
+    .for-who h3 {
+      font-size: 1.1rem;
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+      color: var(--cream);
+      margin-bottom: 24px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .for-who .list-block h3.not-for {
+      color: var(--text-muted);
+    }
+
+    .check-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .check-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      font-size: 1rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+
+    .check-list .marker {
+      flex-shrink: 0;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.7rem;
+      margin-top: 2px;
+    }
+
+    .check-list .marker.yes {
+      background: rgba(139, 28, 28, 0.08);
+      color: var(--gold-dark);
+      border: 1px solid rgba(139, 28, 28, 0.2);
+    }
+
+    .check-list .marker.no {
+      background: rgba(107, 101, 117, 0.08);
+      color: var(--text-muted);
+      border: 1px solid rgba(107, 101, 117, 0.2);
+    }
+
+    .for-who-wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+    }
+
+    .for-who-image-col {
+      width: 100%;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-card);
+      aspect-ratio: 4/5;
+    }
+
+    .for-who-image-col img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      aspect-ratio: 4/5;
+      display: block;
+    }
+
+    @media (min-width: 768px) {
+      .for-who-wrapper {
+        display: grid;
+        grid-template-columns: 6fr 4fr;
+        align-items: center;
+        gap: 60px;
+      }
+      .for-who-image-col {
+        aspect-ratio: 3/4;
+      }
+      .for-who-image-col img {
+        aspect-ratio: 3/4;
+      }
+    }
+
+    /* ——— TESTIMONIALS (VIDEOS & PRINTS) ——— */
+    .testimonials {
+      background: var(--bg-secondary);
+    }
+
+    /* Text Testimonial styling (kept for backup or mixed use) */
+    .testimonial-card {
+      padding: 40px;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      margin-bottom: 24px;
+      position: relative;
+      transition: all 0.3s ease;
+      box-shadow: var(--shadow-card);
+    }
+
+    .testimonial-card:hover {
+      border-color: var(--border-hover);
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+      transform: translateY(-2px);
+    }
+
+    .testimonial-card::before {
+      content: '\201C';
+      font-family: 'Playfair Display', serif;
+      font-size: 4rem;
+      color: var(--gold);
+      opacity: 0.15;
+      position: absolute;
+      top: 16px;
+      left: 32px;
+      line-height: 1;
+    }
+
+    .testimonial-card blockquote {
+      font-size: 1.05rem;
+      color: var(--text-secondary);
+      line-height: 1.8;
+      margin-bottom: 24px;
+      font-style: italic;
+      position: relative;
+      z-index: 1;
+    }
+
+    .testimonial-card .author {
+      font-size: 0.88rem;
+      color: var(--gold-dark);
+      font-weight: 600;
+      letter-spacing: 0.01em;
+    }
+
+    .testimonial-card .author span {
+      color: var(--text-muted);
+      font-weight: 400;
+    }
+
+    /* Video Grid */
+    .video-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: 20px;
+      margin-bottom: 40px;
+    }
+
+    .video-placeholder {
+      aspect-ratio: 9/16;
+      background: var(--bg-card);
+      border: 1px dashed var(--border-hover);
+      border-radius: var(--radius-lg);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+      box-shadow: var(--shadow-card);
+      transition: all 0.3s ease;
+    }
+
+    .video-placeholder:hover {
+      transform: translateY(-4px);
+      border-color: var(--gold);
+    }
+
+    .play-btn {
+      width: 56px;
+      height: 56px;
+      background: var(--gradient-gold);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: var(--shadow-gold);
+      margin-bottom: 12px;
+    }
+
+    .play-btn::after {
+      content: '';
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 8px 0 8px 14px;
+      border-color: transparent transparent transparent #ffffff;
+      margin-left: 4px;
+    }
+
+    .video-label {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+
+    /* Prints Grid */
+    .prints-section-title {
+      font-family: 'Inter', sans-serif;
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--cream);
+      margin-bottom: 24px;
+      text-align: center;
+      margin-top: 60px;
+    }
+
+    .prints-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 24px;
+    }
+
+    .print-placeholder {
+      aspect-ratio: 4/3;
+      background: var(--bg-card);
+      border: 1px dashed var(--border-hover);
+      border-radius: var(--radius);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      box-shadow: var(--shadow-card);
+      padding: 20px;
+      text-align: center;
+    }
+
+    .social-proof-stat {
+      text-align: center;
+      margin-top: 48px;
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      letter-spacing: 0.06em;
+    }
+
+    /* ——— AUTHORITY ——— */
+    .authority-wrapper {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 40px;
+    }
+
+    @media (min-width: 768px) {
+      .authority-wrapper {
+        grid-template-columns: 4fr 6fr;
+        align-items: center;
+        gap: 60px;
+      }
+    }
+
+    .photo-placeholder {
+      width: 100%;
+      aspect-ratio: 4/5;
+      background: var(--bg-card);
+      border: 1px dashed var(--border-hover);
+      border-radius: var(--radius-lg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      box-shadow: var(--shadow-card);
+    }
+
+    .photo-image {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      aspect-ratio: 4/5;
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-card);
+      display: block;
+    }
+
+    .authority-content {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
+
+    .authority-text p {
+      font-size: 1.05rem;
+      line-height: 1.85;
+      margin-bottom: 16px;
+    }
+
+    .credentials {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 12px;
+      margin-top: 24px;
+    }
+
+    .credential-item {
+      padding: 16px 20px;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      font-size: 0.88rem;
+      color: var(--text-secondary);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      box-shadow: var(--shadow-card);
+    }
+
+    .credential-item .dot {
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: var(--gold);
+      flex-shrink: 0;
+    }
+
+    /* ——— CTA FINAL ——— */
+    .cta-final {
+      background: var(--bg-secondary);
+      text-align: center;
+      position: relative;
+    }
+
+    .cta-final::before {
+      content: '';
+      position: absolute;
+      top: -100px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, rgba(139, 28, 28, 0.04) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .cta-final h2 {
+      margin-bottom: 32px;
+    }
+
+    .cta-final .cta-text {
+      max-width: 600px;
+      margin: 0 auto 44px;
+      font-size: 1.05rem;
+    }
+
+    .cta-final .cta-btn {
+      padding: 20px 52px;
+      font-size: 1rem;
+    }
+
+    /* ——— FAQ ——— */
+    .faq-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .faq-item {
+      border-bottom: 1px solid var(--border);
+      overflow: hidden;
+    }
+
+    .faq-item:first-child {
+      border-top: 1px solid var(--border);
+    }
+
+    .faq-question {
+      width: 100%;
+      background: none;
+      border: none;
+      padding: 24px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+      text-align: left;
+      font-family: 'Inter', sans-serif;
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--cream);
+      transition: color 0.3s ease;
+    }
+
+    .faq-question:hover {
+      color: var(--gold-dark);
+    }
+
+    .faq-question .toggle {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      border: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      transition: all 0.3s ease;
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      background: var(--bg-card);
+    }
+
+    .faq-item.active .faq-question .toggle {
+      transform: rotate(45deg);
+      border-color: var(--gold);
+      color: var(--gold);
+      background: rgba(139, 28, 28, 0.05);
+    }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease, padding 0.4s ease;
+    }
+
+    .faq-item.active .faq-answer {
+      max-height: 300px;
+      padding-bottom: 24px;
+    }
+
+    .faq-answer p {
+      font-size: 0.95rem;
+      line-height: 1.8;
+      color: var(--text-secondary);
+    }
+
+    /* ——— FOOTER ——— */
+    footer {
+      padding: 60px 24px;
+      text-align: center;
+      border-top: 1px solid var(--border);
+    }
+
+    footer .footer-cta {
+      margin-bottom: 32px;
+    }
+
+    footer .footer-cta .cta-btn {
+      padding: 16px 36px;
+      font-size: 0.9rem;
+    }
+
+    footer p {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      margin-bottom: 4px;
+    }
+
+    /* ——— RESPONSIVE ——— */
+    @media (max-width: 640px) {
+      :root {
+        --section-padding: 60px 20px;
+      }
+
+      h2 {
+        font-size: 1.7rem;
+        margin-bottom: 28px;
+      }
+
+      .hero {
+        padding: 40px 20px 30px;
+        min-height: auto;
+      }
+
+      .hero h1 {
+        margin-bottom: 20px;
+      }
+
+      .hero-sub {
+        margin-bottom: 30px;
+        font-size: 1.05rem;
+      }
+
+      .cta-btn {
+        padding: 14px 12px;
+        font-size: 0.85rem;
+        width: 100%;
+        justify-content: center;
+        line-height: 1.3;
+        text-align: center;
+        white-space: normal;
+      }
+
+      .cta-final .cta-btn {
+        padding: 14px 16px;
+      }
+
+      .step-card {
+        padding: 24px;
+      }
+
+      .step-card:not(:last-child)::after {
+        content: '';
+        position: absolute;
+        bottom: -24px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 2px;
+        height: 24px;
+        background: var(--gold);
+        opacity: 0.3;
+      }
+
+      /* Removed session-meta override, grid auto-fit handles it */
+      
+      .video-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (min-width: 641px) {
+      .steps-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ════════════════ HERO ════════════════ -->
+  <section class="hero" id="hero">
+    <div class="hero-content">
+      <h1 class="fade-in fade-in-delay-1">Você construiu uma carreira inteira. Mas no digital, <em>ninguém sabe que você existe?</em></h1>
+      <p class="hero-sub fade-in fade-in-delay-2">Agende uma sessão de diagnóstico gratuita de 30 minutos e descubra o que exatamente está impedindo sua presença digital de gerar clientes e o que precisa mudar primeiro.</p>
+      <div class="fade-in fade-in-delay-3">
+        <a href="https://form.respondi.app/YeXuJijU" target="_blank" class="cta-btn" id="cta-hero">
+          Quero tentar uma vaga para o diagnóstico <span class="arrow">&rarr;</span>
+        </a>
+        <p class="cta-support">Para mulheres 40+ com expertise real e presença digital que ainda não reflete isso.</p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ════════════════ DOR ════════════════ -->
+  <section class="pain" id="dor">
+    <div class="container">
+      <div class="section-divider fade-in"></div>
+      <div class="pain-content fade-in" style="max-width: 800px; margin: 0 auto; text-align: left;">
+        <h2>Isso te soa familiar?</h2>
+        <div class="pain-text">
+          <p>Você publica com frequência. Escolhe a foto certa. Escreve a legenda. Posta. E nada acontece.</p>
+          <p>Nenhum cliente novo. Nenhuma mensagem de alguém que te encontrou pelo Instagram. Nenhum sinal de que todo esse esforço está sendo visto por alguém que importa.</p>
+          <p>Você olha para o seu perfil e sabe: ele não mostra nem metade do que você é capaz de entregar. Quinze, vinte anos de formação e experiência comprimidos numa bio que não diz nada e num feed que não converte ninguém.</p>
+          <p>E o pior não é a frustração. O pior é a sensação de que talvez o digital não seja para você. De que isso é coisa de uma geração que entende os códigos que você não entende.</p>
+          <p class="highlight">Não é.</p>
+          <p>O problema nunca foi a sua idade. O problema é que ninguém nunca olhou para o seu caso específico e te disse com honestidade o que está errado e o que fazer a respeito.</p>
+          <p>É exatamente isso que o diagnóstico faz.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ════════════════ O QUE É ════════════════ -->
+  <section class="what-is" id="oquee">
+    <div class="container">
+      <div class="section-divider fade-in"></div>
+      <div class="pain-wrapper">
+        <div class="what-is-content">
+          <h2 class="fade-in">30 minutos de clareza que você não vai conseguir em nenhum curso</h2>
+          <p class="intro-text fade-in">Não é uma aula. Não é um webinar com 200 pessoas. Não é um PDF genérico com "10 dicas para o Instagram". É uma sessão individual, comigo, olhando para o seu perfil, o seu posicionamento e a sua realidade e te dizendo com precisão cirúrgica onde está o gargalo.</p>
+
+          <h3 style="font-family: 'Inter', sans-serif; font-size: 0.82rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold-dark); margin-bottom: 24px;" class="fade-in">O que você vai sair sabendo</h3>
+
+          <ul class="benefits-list">
+            <li class="fade-in"><span class="icon"></span>A razão real pela qual seu perfil atrai curtidas mas não atrai clientes e não é o que você pensa</li>
+            <li class="fade-in fade-in-delay-1"><span class="icon"></span>O erro de posicionamento que faz você parecer "mais uma" no feed, mesmo sendo referência na sua área</li>
+            <li class="fade-in fade-in-delay-2"><span class="icon"></span>O próximo passo concreto para os seus próximos 30 dias: um passo, não uma lista impossível</li>
+            <li class="fade-in fade-in-delay-3"><span class="icon"></span>Se o seu nicho específico tem demanda real no digital com base em dados, não em achismo</li>
+          </ul>
+
+        </div>
+        <div class="what-is-right-col">
+          <div class="pain-image-col fade-in fade-in-delay-1" style="margin-bottom: 32px;">
+            <img src="workspace.png" alt="Workspace Premium" loading="lazy">
+          </div>
+          <div class="session-meta fade-in">
+            <div class="meta-item">
+              <div class="meta-icon">
+                <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+              </div>
+              <div class="meta-text">
+                <strong>Duração</strong>
+                <span>30 minutos</span>
+              </div>
+            </div>
+
+            <div class="meta-item">
+              <div class="meta-icon">
+                <svg viewBox="0 0 24 24"><path d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14v-4z"></path><rect x="3" y="6" width="12" height="12" rx="2" ry="2"></rect></svg>
+              </div>
+              <div class="meta-text">
+                <strong>Formato</strong>
+                <span>Videochamada</span>
+              </div>
+            </div>
+
+            <div class="meta-item">
+              <div class="meta-icon">
+                <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+              </div>
+              <div class="meta-text">
+                <strong>Resultado</strong>
+                <span>Plano específico</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ════════════════ COMO FUNCIONA ════════════════ -->
+  <section class="steps" id="como-funciona">
+    <div class="container">
+      <div class="section-divider fade-in"></div>
+      <h2 class="fade-in">Simples. Sem burocracia. Sem enrolação.</h2>
+      <div class="steps-grid">
+        <div class="step-card fade-in">
+          <h3>Preencha o formulário</h3>
+          <p>Quatro perguntas sobre seu momento atual, seu nicho e o que você quer alcançar. Me permite chegar na sessão já entendendo o seu caso.</p>
+        </div>
+        <div class="step-card fade-in fade-in-delay-1">
+          <h3>Escolha seu horário</h3>
+          <p>Você acessa a agenda e reserva o dia e horário que funcionam para você. Atendo Brasil e Portugal.</p>
+        </div>
+        <div class="step-card fade-in fade-in-delay-2">
+          <h3>Apareça na chamada</h3>
+          <p>30 minutos de videochamada. Sem julgamento, sem pressão, sem script de vendas. Análise real e direção honesta.</p>
+        </div>
+        <div class="step-card fade-in fade-in-delay-3">
+          <h3>Saia com um plano</h3>
+          <p>Você termina sabendo o que está travando e o que precisa acontecer primeiro. A partir daí, a decisão é sua.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ════════════════ PARA QUEM ════════════════ -->
+  <section class="for-who" id="para-quem">
+    <div class="container">
+      <div class="section-divider fade-in"></div>
+      <div class="for-who-wrapper">
+        <div class="for-who-content fade-in">
+          <h2>Esse diagnóstico foi pensado para um perfil muito específico de mulher.</h2>
+
+          <div class="list-block">
+            <h3>Esse diagnóstico é para você se</h3>
+            <ul class="check-list">
+              <li><span class="marker yes">&#10003;</span>Você é terapeuta, coach, psicóloga, nutricionista ou profissional de saúde e bem-estar</li>
+              <li><span class="marker yes">&#10003;</span>Tem mais de 40 anos e construiu uma carreira com profundidade mas o digital não reflete isso</li>
+              <li><span class="marker yes">&#10003;</span>Seus clientes ainda chegam por indicação e você sabe que esse modelo tem prazo de validade</li>
+              <li><span class="marker yes">&#10003;</span>Já tentou "aprender marketing" e saiu com a sensação de que nada daquilo foi feito para a sua realidade</li>
+              <li><span class="marker yes">&#10003;</span>Está cansada de ser a profissional mais qualificada da sala e a mais invisível no digital</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="for-who-right-col">
+          <div class="for-who-image-col fade-in fade-in-delay-1" style="margin-bottom: 32px;">
+            <img src="mulher_40_plus.jpg" alt="Mulher 40+ Profissional" loading="lazy">
+          </div>
+          <div class="list-block fade-in">
+            <h3 class="not-for">Esse diagnóstico não é para você se</h3>
+            <ul class="check-list">
+              <li><span class="marker no">&times;</span>Você está buscando uma solução mágica que não exija comprometimento</li>
+              <li><span class="marker no">&times;</span>Ainda não tem clareza sobre o que oferece ou para quem oferece</li>
+              <li><span class="marker no">&times;</span>Quer mais um conteúdo para consumir e guardar numa pasta que nunca abre</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ════════════════ DEPOIMENTOS ════════════════ -->
+  <section class="testimonials" id="depoimentos">
+    <div class="container">
+      <div class="section-divider fade-in"></div>
+      <h2 class="fade-in">Resultados reais. De mulheres reais. Com vidas reais.</h2>
+
+      <!-- Videos Grid -->
+      <div class="video-grid fade-in">
+        <video class="testimonial-video" controls style="width: 100%; border-radius: var(--radius-lg); aspect-ratio: 9/16; object-fit: cover; box-shadow: var(--shadow-card); background: #000;">
+          <source src="DEP1.mp4" type="video/mp4">
+        </video>
+        <video class="testimonial-video" controls style="width: 100%; border-radius: var(--radius-lg); aspect-ratio: 9/16; object-fit: cover; box-shadow: var(--shadow-card); background: #000;">
+          <source src="DEP2.mp4" type="video/mp4">
+        </video>
+        <video class="testimonial-video" controls style="width: 100%; border-radius: var(--radius-lg); aspect-ratio: 9/16; object-fit: cover; box-shadow: var(--shadow-card); background: #000;">
+          <source src="DEP3.mp4" type="video/mp4">
+        </video>
+        <video class="testimonial-video" controls style="width: 100%; border-radius: var(--radius-lg); aspect-ratio: 9/16; object-fit: cover; box-shadow: var(--shadow-card); background: #000;">
+          <source src="DEP4.mp4" type="video/mp4">
+        </video>
+      </div>
+
+      <!-- Texto Depoimentos (mantidos para reforço) -->
+      <div class="testimonial-card fade-in">
+        <blockquote>Cheguei na sessão achando que meu problema era não saber criar conteúdo. A Juliana me mostrou em 30 minutos que era minha bio. Mudei. Em três semanas, dois clientes novos chegaram pelo Instagram. Pela primeira vez em dez anos, alguém me encontrou sem indicação.</blockquote>
+        <div class="author">Renata S., 44 anos <span>&middot; Terapeuta holística &middot; São Paulo</span></div>
+      </div>
+
+      <!-- Prints Grid -->
+      <h3 class="prints-section-title fade-in">O que acontece depois da sessão</h3>
+      <div class="prints-grid fade-in">
+        <img src="print.jpeg" alt="Depoimento 1" style="width: 100%; border-radius: var(--radius-lg); box-shadow: var(--shadow-card);">
+        <img src="print2.jpeg" alt="Depoimento 2" style="width: 100%; border-radius: var(--radius-lg); box-shadow: var(--shadow-card);">
+        <img src="print3.jpeg" alt="Depoimento 3" style="width: 100%; border-radius: var(--radius-lg); box-shadow: var(--shadow-card);">
+        <img src="print4.jpeg" alt="Depoimento 4" style="width: 100%; border-radius: var(--radius-lg); box-shadow: var(--shadow-card);">
+        <img src="print5.jpeg" alt="Depoimento 5" style="width: 100%; border-radius: var(--radius-lg); box-shadow: var(--shadow-card);">
+        <img src="print6.jpeg" alt="Depoimento 6" style="width: 100%; border-radius: var(--radius-lg); box-shadow: var(--shadow-card);">
+        <img src="print7.jpeg" alt="Depoimento 7" style="width: 100%; border-radius: var(--radius-lg); box-shadow: var(--shadow-card);">
+        <img src="print8.jpeg" alt="Depoimento 8" style="width: 100%; border-radius: var(--radius-lg); box-shadow: var(--shadow-card);">
+        <img src="print9.jpeg" alt="Depoimento 9" style="width: 100%; border-radius: var(--radius-lg); box-shadow: var(--shadow-card);">
+        <img src="print10.jpeg" alt="Depoimento 10" style="width: 100%; border-radius: var(--radius-lg); box-shadow: var(--shadow-card);">
+        <img src="print11.jpeg" alt="Depoimento 11" style="width: 100%; border-radius: var(--radius-lg); box-shadow: var(--shadow-card);">
+        <img src="print12.jpeg" alt="Depoimento 12" style="width: 100%; border-radius: var(--radius-lg); box-shadow: var(--shadow-card);">
+      </div>
+
+      <p class="social-proof-stat fade-in">Mais de 500 sessões de diagnóstico realizadas com mulheres 40+ no Brasil e em Portugal.</p>
+
+      <div style="text-align: center; margin-top: 48px;" class="fade-in">
+        <a href="https://form.respondi.app/YeXuJijU" target="_blank" class="cta-btn" id="cta-social">
+          Quero tentar uma vaga para o diagnóstico <span class="arrow">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ════════════════ AUTORIDADE ════════════════ -->
+  <section class="authority" id="juliana">
+    <div class="container">
+      <div class="section-divider fade-in"></div>
+      <h2 class="fade-in">Quem vai conduzir o seu diagnóstico</h2>
+
+      <div class="authority-wrapper fade-in">
+        
+        <!-- Foto e Credenciais -->
+        <div class="photo-column">
+          <img src="../Juliana.png" alt="Juliana Moraes - Analista Comportamental" class="photo-image" onerror="this.src='Juliana.png'">
+          <div class="credentials">
+            <div class="credential-item"><span class="dot"></span>Analista Comportamental Certificada</div>
+            <div class="credential-item"><span class="dot"></span>Neurociência Aplicada ao Comportamento</div>
+            <div class="credential-item"><span class="dot"></span>Criadora do Método Código Alfa 40+</div>
+            <div class="credential-item"><span class="dot"></span>Clientes no Brasil e em Portugal</div>
+          </div>
+        </div>
+
+        <div class="authority-content">
+          <div class="authority-text">
+            <p><strong>Juliana Moraes</strong> é Analista Comportamental e criadora do Método Código Alfa 40+ a única metodologia que une neurociência comportamental com estratégia digital pensada especificamente para mulheres que já construíram uma carreira e precisam que o digital reflita essa construção.</p>
+            <p>Ela não ensina "truques de Instagram". Ela diagnostica por que o seu posicionamento não funciona e reconstrói a estrutura que faz funcionar.</p>
+            <p>Juliana sabe o que é ter 20 anos de bagagem profissional e se sentir invisível no digital. Foi exatamente por isso que criou um método que não ignora a maturidade mas a transforma no maior diferencial competitivo de cada aluna.</p>
+            <p>Atende mulheres no Brasil e em Portugal. Mais de 738 conteúdos publicados sobre posicionamento digital feminino.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ════════════════ CTA FINAL ════════════════ -->
+  <section class="cta-final" id="agendar">
+    <div class="container">
+      <div class="section-divider fade-in"></div>
+      <h2 class="fade-in">Você não precisa de mais um curso.<br>Você precisa saber o que está travando agora.</h2>
+
+      <div class="cta-text">
+        <p class="fade-in">A maioria das mulheres que chegam até essa página já tentou resolver o problema da visibilidade digital sozinha. Ou com cursos genéricos que não entendem o que significa ter 45 anos e recomeçar no digital enquanto mantém uma carreira, uma família e uma rotina que não para.</p>
+        <p class="fade-in">O Diagnóstico Alfa existe porque acredito que clareza vem antes de qualquer investimento. Você merece saber onde está o problema antes de gastar dinheiro tentando resolvê-lo no escuro.</p>
+        <p class="fade-in">São 30 minutos. São gratuitos. E podem mudar completamente a forma como você enxerga sua presença digital.</p>
+      </div>
+
+      <div class="fade-in">
+        <a href="https://form.respondi.app/YeXuJijU" target="_blank" class="cta-btn" id="cta-final">
+          Quero tentar uma vaga para o diagnóstico <span class="arrow">&rarr;</span>
+        </a>
+        <p class="cta-support">Seus dados estão protegidos. Sem spam. Sem compromisso.</p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ════════════════ FAQ ════════════════ -->
+  <section class="faq" id="faq">
+    <div class="container">
+      <div class="section-divider fade-in"></div>
+      <h2 class="fade-in">Perguntas que você provavelmente está se fazendo</h2>
+
+      <div class="faq-list fade-in">
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>É realmente gratuito?</span>
+            <span class="toggle">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Sim. Sem taxa, sem "apenas o primeiro mês grátis", sem surpresas no checkout. O diagnóstico é gratuito porque acredito que você precisa de clareza antes de tomar qualquer decisão de investimento. Se depois da sessão fizer sentido trabalharmos juntas, ótimo. Se não fizer, você sai com um plano de qualquer forma.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>Quanto tempo dura a sessão?</span>
+            <span class="toggle">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>30 minutos. Pontual, objetiva e sem enrolação. Você não precisa separar uma tarde inteira.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>Funciona para a minha área?</span>
+            <span class="toggle">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>O Método Código Alfa foi desenvolvido para profissionais de saúde e bem-estar: terapeutas, coaches, psicólogas, nutricionistas, médicas, consultoras. Se você tem uma especialidade e quer ser encontrada pelo cliente certo no digital, o método foi construído para a sua realidade.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>Eu não entendo nada de Instagram. Mesmo assim funciona?</span>
+            <span class="toggle">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Especialmente nesse caso. O método foi criado para mulheres que não cresceram no digital e se sentem em desvantagem por isso. Sua experiência e maturidade profissional são ativos, não obstáculos. O que falta é a estrutura certa. E é isso que o diagnóstico identifica.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>O que acontece depois do diagnóstico?</span>
+            <span class="toggle">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Você sai com uma análise real do seu posicionamento e os próximos passos específicos para o seu caso. Se fizer sentido, posso apresentar as formas de continuar trabalhando juntas. Mas não existe pressão. A decisão é sua, no seu tempo.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>Posso fazer o diagnóstico se sou de Portugal?</span>
+            <span class="toggle">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Sim. Atendo mulheres no Brasil e em Portugal. A sessão é 100% online e os horários contemplam os dois fusos.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ════════════════ FOOTER ════════════════ -->
+  <footer>
+    <div class="container">
+      <div class="footer-cta">
+        <a href="https://form.respondi.app/YeXuJijU" target="_blank" class="cta-btn" id="cta-footer">
+          Quero tentar uma vaga para o diagnóstico <span class="arrow">&rarr;</span>
+        </a>
+      </div>
+      <p>Copyright &copy; 2026. Todos os direitos reservados. Juliana Moraes</p>
+    </div>
+  </footer>
+
+
+  <!-- ════════════════ SCRIPTS ════════════════ -->
+  <script>
+    // Scroll animations
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, {
+      threshold: 0.1,
+      rootMargin: '0px 0px -40px 0px'
+    });
+
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+    // FAQ accordion
+    document.querySelectorAll('.faq-question').forEach(button => {
+      button.addEventListener('click', () => {
+        const item = button.parentElement;
+        const isActive = item.classList.contains('active');
+
+        // Close all
+        document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('active'));
+        document.querySelectorAll('.faq-question').forEach(b => b.setAttribute('aria-expanded', 'false'));
+
+        // Open clicked if it wasn't active
+        if (!isActive) {
+          item.classList.add('active');
+          button.setAttribute('aria-expanded', 'true');
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
