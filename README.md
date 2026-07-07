@@ -1,0 +1,2 @@
+# codigoalfa
+Diagnóstico
